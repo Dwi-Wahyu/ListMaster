@@ -88,5 +88,3 @@ def gabungkan_list_unik(*lists):
         return []
 
     return hasil 
-
-print(gabungkan_list_unik(list1, list2))

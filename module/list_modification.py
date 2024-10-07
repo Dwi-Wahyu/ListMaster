@@ -1,6 +1,3 @@
-list1 = [1, 2, 3, 4]
-list2 = [1, 2, 3, 5]
-
 def gabungkan_list(*lists):
     """
     Menggabungkan sejumlah list menjadi satu list besar.

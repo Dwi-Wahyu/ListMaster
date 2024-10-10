@@ -151,7 +151,7 @@ print("Modus:", modus(data))
 - Pastikan bahwa list yang digunakan untuk fungsi ini hanya berisi elemen numerik (int atau float).
 - Modul ini akan menghasilkan exception jika list tidak memenuhi syarat.
 
-## 5. modul `list_search`
+## 2. modul `list_search`
 
 Modul ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.
 

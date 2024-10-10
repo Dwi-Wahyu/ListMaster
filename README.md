@@ -1,8 +1,8 @@
-<h1 align="center">ListMaster</h1>
+<h1 align="center">⚡ListMaster⚡</h1>
 
 ### Apa fungsi library ini ?
 
-ListMaster adalah library yang memungkinkan anda untuk menyortir, memodifikasi, menggabungkan dan masih banyak lagi
+ListMaster adalah library Python yang dirancang untuk memudahkan berbagai operasi pada list, termasuk sorting, modifikasi, penggabungan, dan manipulasi data lainnya. Dengan berbagai algoritma sorting klasik serta alat bantu lainnya, ListMaster membantu Anda mengelola data berbasis list secara efisien.
 
 ## 1. Modul `list_sorting`
 

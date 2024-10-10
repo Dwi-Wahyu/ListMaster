@@ -57,6 +57,111 @@ print(sorted_arr)  # Output: [11, 12, 22, 25, 64]
 
 Modul ini dirancang untuk memberikan kemudahan dalam mengurutkan data dengan berbagai metode yang efisien. Silakan gunakan sesuai kebutuhan Anda!
 
+## Modul statistik_list.py
+
+Modul ini menyediakan fungsi-fungsi untuk melakukan analisis statistik pada list, termasuk menghitung rata-rata, median, nilai minimum, nilai maksimum, dan modus. Modul ini dirancang untuk mempermudah pengguna dalam melakukan analisis data numerik.
+
+### Fungsi-Fungsi
+
+#### 1. rata_rata(target_list)
+
+*Deskripsi*: 
+Menghitung rata-rata dari elemen numerik dalam list.
+
+*Parameter*:
+- target_list (list): List yang berisi elemen numerik (int atau float).
+
+*Pengembalian*:
+- float: Rata-rata dari elemen dalam list. Mengembalikan 0 jika list kosong.
+
+*Contoh*:
+python
+data = [1, 2, 3, 4]
+result = rata_rata(data)
+# Output: 2.5
+
+
+---
+
+#### 2. median(target_list)
+
+*Deskripsi*: 
+Menghitung median dari elemen numerik dalam list.
+
+*Parameter*:
+- target_list (list): List yang berisi elemen numerik (int atau float).
+
+*Pengembalian*:
+- float: Nilai median dari elemen dalam list.
+
+*Contoh*:
+python
+data = [1, 2, 3, 4]
+result = median(data)
+# Output: 2.5
+
+
+---
+
+#### 3. min_max(target_list)
+
+*Deskripsi*: 
+Mengembalikan nilai minimum dan maksimum dari elemen numerik dalam list.
+
+*Parameter*:
+- target_list (list): List yang berisi elemen numerik (int atau float).
+
+*Pengembalian*:
+- tuple: Tuple yang berisi nilai minimum dan maksimum.
+
+*Contoh*:
+python
+data = [1, 2, 3, 4]
+result = min_max(data)
+# Output: (1, 4)
+
+
+---
+
+#### 4. modus(target_list)
+
+*Deskripsi*: 
+Menghitung modus dari elemen dalam list.
+
+*Parameter*:
+- target_list (list): List yang berisi elemen (int, float, atau tipe data lainnya).
+
+*Pengembalian*:
+- list atau string: Daftar modus jika ada lebih dari satu, atau pesan jika semua elemen muncul dengan frekuensi yang sama.
+
+*Contoh*:
+python
+data = [1, 2, 2, 3]
+result = modus(data)
+# Output: [2]
+
+
+---
+
+### Penggunaan
+
+Untuk menggunakan modul ini, cukup impor modul dalam skrip Python Anda dan panggil fungsi yang diperlukan.
+
+python
+from statistik_list import *
+
+data = [1, 2, 2, 3, 4, 4, 4, 5]
+
+print("Rata-rata:", rata_rata(data))
+print("Median:", median(data))
+print("Min dan Max:", min_max(data))
+print("Modus:", modus(data))
+
+### Catatan
+
+- Pastikan bahwa list yang digunakan untuk fungsi ini hanya berisi elemen numerik (int atau float).
+- Modul ini akan menghasilkan exception jika list tidak memenuhi syarat.
+
 ## 5. modul `list_search`
 
 Modul ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.

@@ -5,9 +5,9 @@
 ListMaster adalah library yang memungkinkan anda untuk menyortir, memodifikasi, menggabungkan dan masih banyak lagi
 
 
-# modul list_search
+# 5. modul `list_search`
 
-Repositori ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.
+Modul ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.
 
 ## Fungsi
 

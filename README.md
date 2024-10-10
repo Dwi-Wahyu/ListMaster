@@ -69,6 +69,3 @@ print(linear_search(arr, target))  # Output: [1, 2]
 print(binary_search(arr, target))  # Output: [1, 2]
 ```
 
-## Lisensi
-
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.

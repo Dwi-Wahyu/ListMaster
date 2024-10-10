@@ -55,6 +55,8 @@ Untuk menggunakan fungsi-fungsi ini, cukup impor ke dalam skrip Python Anda dan 
 
 ## Contoh
 
+### Contoh dengan Angka
+
 ```python
 arr = [1, 2, 2, 3, 4, 5]
 target = 2
@@ -67,5 +69,52 @@ print(linear_search(arr, target))  # Output: [1, 2]
 
 # Lakukan pencarian biner
 print(binary_search(arr, target))  # Output: [1, 2]
+```
+
+### Contoh dengan String
+
+```python
+arr = ["apel", "jeruk", "jeruk", "mangga", "pisang"]
+target = "jeruk"
+
+# Periksa apakah list diurutkan
+print(is_sorted(arr))  # Output: True
+
+# Lakukan pencarian linear
+print(linear_search(arr, target))  # Output: [1, 2]
+
+# Lakukan pencarian biner
+print(binary_search(arr, target))  # Output: [1, 2]
+```
+
+### Contoh dengan Tuple
+
+```python
+arr = [(1, 'a'), (2, 'b'), (2, 'b'), (3, 'c')]
+target = (2, 'b')
+
+# Periksa apakah list diurutkan
+print(is_sorted(arr))  # Output: True
+
+# Lakukan pencarian linear
+print(linear_search(arr, target))  # Output: [1, 2]
+
+# Lakukan pencarian biner
+print(binary_search(arr, target))  # Output: [1, 2]
+```
+
+### Contoh dengan Boolean
+
+```python
+arr = [True, True, False, False, True]
+target = True
+
+# Periksa apakah list diurutkan
+print(is_sorted(arr))  # Output: False
+
+# Lakukan pencarian linear
+print(linear_search(arr, target))  # Output: [0, 1, 4]
+
+# Pencarian biner tidak dapat dilakukan karena list tidak terurut
 ```
 

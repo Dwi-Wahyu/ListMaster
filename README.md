@@ -5,67 +5,70 @@
 ListMaster adalah library yang memungkinkan anda untuk menyortir, memodifikasi, menggabungkan dan masih banyak lagi
 
 
-# list_search
+# modul list_search
 
-This repository contains Python implementations of various search algorithms, including linear search and binary search, along with a utility function to check if a list is sorted in ascending order.
+Repositori ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.
 
-## Functions
+## Fungsi
 
 ### 1. `is_sorted(arr)`
 
-Checks if a list is sorted in ascending order.
+Memeriksa apakah sebuah list diurutkan dalam urutan menaik.
 
-- **Parameters:**
-  - `arr`: A list of elements to check.
+- **Parameter:**
+  - `arr`: Sebuah list elemen yang akan diperiksa.
   
-- **Returns:**
-  - `True` if the list is sorted, `False` otherwise.
+- **Mengembalikan:**
+  - `True` jika list diurutkan, `False` jika tidak.
 
 ### 2. `linear_search(arr, target)`
 
-Performs a linear search to find all occurrences of a target element in a list.
+Melakukan pencarian linear untuk menemukan semua kemunculan elemen target dalam sebuah list.
 
-- **Parameters:**
-  - `arr`: A list of elements to search.
-  - `target`: The element to search for.
+- **Parameter:**
+  - `arr`: Sebuah list elemen yang akan dicari.
+  - `target`: Elemen yang dicari.
   
-- **Returns:**
-  - A list of indices where the target is found, or an empty list if not found.
+- **Mengembalikan:**
+  - Sebuah list indeks di mana target ditemukan, atau list kosong jika tidak ditemukan.
 
-- **Raises:**
-  - `ValueError`: If the first argument is not a list.
+- **Mengangkat:**
+  - `ValueError`: Jika argumen pertama bukan sebuah list.
 
 ### 3. `binary_search(arr, target)`
 
-Performs a binary search to find all occurrences of a target element in a sorted list.
+Melakukan pencarian biner untuk menemukan semua kemunculan elemen target dalam sebuah list yang terurut.
 
-- **Parameters:**
-  - `arr`: A sorted list of elements to search.
-  - `target`: The element to search for.
+- **Parameter:**
+  - `arr`: Sebuah list yang sudah diurutkan untuk pencarian.
+  - `target`: Elemen yang dicari.
   
-- **Returns:**
-  - A list of indices where the target is found, or an empty list if not found.
+- **Mengembalikan:**
+  - Sebuah list indeks di mana target ditemukan, atau list kosong jika tidak ditemukan.
 
-- **Raises:**
-  - `ValueError`: If the first argument is not a list or if the list is not sorted in ascending order.
+- **Mengangkat:**
+  - `ValueError`: Jika argumen pertama bukan sebuah list atau jika list tidak diurutkan dalam urutan menaik.
 
-## Usage
+## Penggunaan
 
-To use these functions, simply import them into your Python script and call them with the appropriate parameters. Ensure that the list is sorted before using the `binary_search` function.
+Untuk menggunakan fungsi-fungsi ini, cukup impor ke dalam skrip Python Anda dan panggil dengan parameter yang sesuai. Pastikan bahwa list sudah diurutkan sebelum menggunakan fungsi `binary_search`.
 
-## Example
+## Contoh
 
 ```python
 arr = [1, 2, 2, 3, 4, 5]
 target = 2
 
-# Check if the list is sorted
+# Periksa apakah list diurutkan
 print(is_sorted(arr))  # Output: True
 
-# Perform linear search
+# Lakukan pencarian linear
 print(linear_search(arr, target))  # Output: [1, 2]
 
-# Perform binary search
+# Lakukan pencarian biner
 print(binary_search(arr, target))  # Output: [1, 2]
 ```
 
+## Lisensi
+
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.

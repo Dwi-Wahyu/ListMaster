@@ -275,3 +275,78 @@ print(linear_search(arr, target))  # Output: [0, 1, 4]
 # Pencarian biner tidak dapat dilakukan karena list tidak terurut
 ```
 
+## 1. Modul list_modification
+Modul ini menyediakan tiga fungsi utama untuk menggabungkan beberapa list menjadi satu list. Fungsinya termasuk menggabungkan list dengan atau tanpa duplikasi, serta menjaga urutan elemen dalam penggabungan tanpa duplikat.
+
+## Fitur
++ gabungkan_list: Menggabungkan sejumlah list menjadi satu list besar tanpa menghapus elemen duplikat.
+
++ gabungkan_tanpa_duplikat: Menggabungkan list tanpa elemen duplikat, tanpa mempertahankan urutan kemunculan.
+
++ gabungkan_list_unik: Menggabungkan list tanpa elemen duplikat, dengan mempertahankan urutan kemunculan pertama dari setiap elemen.
+
+## Instalasi
+Modul ini tidak memerlukan instalasi khusus. Cukup salin kode fungsi ke dalam proyek Python Anda.
+
+## Fungsi
+### 1. gabungkan_list(*lists)
+Fungsi ini menggabungkan sejumlah list menjadi satu list besar. Semua elemen dari list yang diberikan akan dimasukkan ke dalam list hasil, tanpa menghapus duplikat.
+
+### Parameter:
++ *lists: Satu atau lebih list yang ingin digabungkan
+
+### Return:
++ Mengembalikan satu list besar yang berisi semua elemen dari list yang diberikan.
+
+### Kesalahan yang Mungkin Terjadi:
++ Jika salah satu argumen bukan list, akan muncul TypeError.
+
+### Contoh Penggunaan
+``` py 
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+gabungan = gabungkan_list(list1, list2)
+print(gabungan)  # Output: [1, 2, 3, 4, 5, 6]
+
+```
+### 2. gabungkan_tanpa_duplikat(*lists)
+Fungsi ini menggabungkan sejumlah list menjadi satu list besar tanpa menyertakan elemen yang duplikat. Pengurutan elemen mungkin berubah karena penggunaan set untuk menghapus duplikat.
+
+### Parameter:
++ *lists: Satu atau lebih list yang ingin digabungkan.
+
++ Return:
+Mengembalikan satu list besar tanpa elemen duplikat.
+
++ Kesalahan yang Mungkin Terjadi:
+Jika salah satu argumen bukan list, akan muncul TypeError.
+
+### Contoh Penggunaan:
+```py
+list1 = [1, 2, 3, 3]
+list2 = [4, 5, 6, 4]
+gabungan = gabungkan_tanpa_duplikat(list1, list2)
+print(gabungan)  # Output: [1, 2, 3, 4, 5, 6]
+```
+### 3. gabungkan_list_unik(*lists)
+Fungsi ini menggabungkan sejumlah list menjadi satu list besar tanpa elemen duplikat, sambil mempertahankan urutan kemunculan pertama dari setiap elemen. Tidak seperti gabungkan_tanpa_duplikat, fungsi ini tidak mengubah urutan elemen yang pertama kali muncul.
+
+### Parameter:
+*lists: Satu atau lebih list yang ingin digabungkan.
+
+### Return:
+Mengembalikan satu list besar yang berisi semua elemen tanpa elemen duplikat, mempertahankan urutan kemunculan pertama.
+
+### Kesalahan yang Mungkin Terjadi:
+Jika salah satu argumen bukan list, akan muncul TypeError.
+
+### Contoh Penggunaan:
+```py 
+list1 = [1, 2, 3, 3]
+list2 = [4, 5, 6, 4]
+gabungan = gabungkan_list_unik(list1, list2)
+print(gabungan)  # Output: [1, 2, 3, 4, 5, 6]
+```
+### Lisensi
+Proyek ini dilisensikan di bawah lisensi MIT. Anda bebas untuk menggunakan, memodifikasi, dan mendistribusikan kode ini selama menyertakan atribusi yang sesuai.
+

@@ -75,13 +75,10 @@ Menghitung rata-rata dari elemen numerik dalam list.
 - float: Rata-rata dari elemen dalam list. Mengembalikan 0 jika list kosong.
 
 *Contoh*:
-python
+```
 data = [1, 2, 3, 4]
-result = rata_rata(data)
-# Output: 2.5
-
-
----
+result = rata_rata(data) # Output: 2.5
+```
 
 #### 2. median(target_list)
 
@@ -95,13 +92,10 @@ Menghitung median dari elemen numerik dalam list.
 - float: Nilai median dari elemen dalam list.
 
 *Contoh*:
-python
+```
 data = [1, 2, 3, 4]
-result = median(data)
-# Output: 2.5
-
-
----
+result = median(data) # Output: 2.5
+```
 
 #### 3. min_max(target_list)
 
@@ -115,13 +109,10 @@ Mengembalikan nilai minimum dan maksimum dari elemen numerik dalam list.
 - tuple: Tuple yang berisi nilai minimum dan maksimum.
 
 *Contoh*:
-python
+```
 data = [1, 2, 3, 4]
-result = min_max(data)
-# Output: (1, 4)
-
-
----
+result = min_max(data) # Output: (1, 4)
+```
 
 #### 4. modus(target_list)
 
@@ -135,19 +126,16 @@ Menghitung modus dari elemen dalam list.
 - list atau string: Daftar modus jika ada lebih dari satu, atau pesan jika semua elemen muncul dengan frekuensi yang sama.
 
 *Contoh*:
-python
+```
 data = [1, 2, 2, 3]
-result = modus(data)
-# Output: [2]
-
-
----
+result = modus(data) # Output: [2]
+```
 
 ### Penggunaan
 
 Untuk menggunakan modul ini, cukup impor modul dalam skrip Python Anda dan panggil fungsi yang diperlukan.
 
-python
+```
 from statistik_list import *
 
 data = [1, 2, 2, 3, 4, 4, 4, 5]
@@ -156,6 +144,7 @@ print("Rata-rata:", rata_rata(data))
 print("Median:", median(data))
 print("Min dan Max:", min_max(data))
 print("Modus:", modus(data))
+```
 
 ### Catatan
 
@@ -307,8 +296,8 @@ list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 gabungan = gabungkan_list(list1, list2)
 print(gabungan)  # Output: [1, 2, 3, 4, 5, 6]
-
 ```
+
 ### 2. gabungkan_tanpa_duplikat(*lists)
 Fungsi ini menggabungkan sejumlah list menjadi satu list besar tanpa menyertakan elemen yang duplikat. Pengurutan elemen mungkin berubah karena penggunaan set untuk menghapus duplikat.
 
@@ -322,12 +311,13 @@ Mengembalikan satu list besar tanpa elemen duplikat.
 Jika salah satu argumen bukan list, akan muncul TypeError.
 
 ### Contoh Penggunaan:
-```py
+```
 list1 = [1, 2, 3, 3]
 list2 = [4, 5, 6, 4]
 gabungan = gabungkan_tanpa_duplikat(list1, list2)
 print(gabungan)  # Output: [1, 2, 3, 4, 5, 6]
 ```
+
 ### 3. gabungkan_list_unik(*lists)
 Fungsi ini menggabungkan sejumlah list menjadi satu list besar tanpa elemen duplikat, sambil mempertahankan urutan kemunculan pertama dari setiap elemen. Tidak seperti gabungkan_tanpa_duplikat, fungsi ini tidak mengubah urutan elemen yang pertama kali muncul.
 
@@ -341,12 +331,103 @@ Mengembalikan satu list besar yang berisi semua elemen tanpa elemen duplikat, me
 Jika salah satu argumen bukan list, akan muncul TypeError.
 
 ### Contoh Penggunaan:
-```py 
+```
 list1 = [1, 2, 3, 3]
 list2 = [4, 5, 6, 4]
 gabungan = gabungkan_list_unik(list1, list2)
 print(gabungan)  # Output: [1, 2, 3, 4, 5, 6]
 ```
-### Lisensi
-Proyek ini dilisensikan di bawah lisensi MIT. Anda bebas untuk menggunakan, memodifikasi, dan mendistribusikan kode ini selama menyertakan atribusi yang sesuai.
 
+## 6. modul "list unique" 
+Modul ini menyediakan beberapa fungsi untuk memanipulasi list di Python, termasuk mengambil elemen unik, menghitung jumlah elemen unik, mengurutkan elemen unik, dan menemukan elemen yang duplikat.
+
+###  Fungsi
+
+### 1. unique_elements(input_list)
+Mengembalikan list hanya dengan elemen-elemen unik (tanpa duplikat).
+
+- *Argumen*:  
+  - input_list (list): List yang berisi elemen-elemen.
+  
+- *Mengembalikan*:  
+  - List elemen unik.
+  
+- *Catatan*:  
+  - Jika input tidak valid (misalnya, elemen tidak bisa di-hash), akan mengembalikan list kosong dan mencetak pesan kesalahan.
+    
+- *Contoh Penggunaan*:
+```
+data = [1, 2, 2, 3, 4, 4, 5]
+result = unique_elements(data)
+print(result)  # Output: [1, 2, 3, 4, 5]
+```
+
+### 2. sum_unique(input_list)
+Mengembalikan jumlah dari semua elemen unik dalam list.
+
+- *Argumen*:  
+  - input_list (list): List yang berisi elemen-elemen.
+  
+- *Mengembalikan*:  
+  - Jumlah dari elemen-elemen unik (int/float).
+  
+- *Catatan*:  
+  - Jika input tidak valid (misalnya, elemen tidak bisa dijumlahkan), akan mengembalikan 0 dan mencetak pesan kesalahan.
+
+- *Contoh Penggunaan*:
+```
+data = [1, 2, 2, 3, 4, 4, 5]
+result = sum_unique(data)
+print(result)  # Output: 15 (1 + 2 + 3 + 4 + 5)
+```
+
+### 3. unique_and_sort(input_list)
+Mengembalikan elemen unik yang sudah diurutkan secara ascending.
+
+- *Argumen*:  
+  - input_list (list): List yang berisi elemen-elemen.
+  
+- *Mengembalikan*:  
+  - List elemen unik yang diurutkan.
+  
+- *Catatan*:  
+  - Jika input tidak valid (misalnya, elemen tidak bisa diurutkan), akan mengembalikan list kosong dan mencetak pesan kesalahan.
+    
+- *Contoh Penggunaan*:
+```
+data = [4, 2, 5, 1, 3, 2, 5]
+result = unique_and_sort(data)
+print(result)  # Output: [1, 2, 3, 4, 5]
+```
+
+### 4. get_duplicates(input_list)
+Mengembalikan elemen-elemen yang duplikat dalam list (tidak unik).
+
+- *Argumen*:  
+  - input_list (list): List yang berisi elemen-elemen.
+  
+- *Mengembalikan*:  
+  - List elemen-elemen yang duplikat.
+  
+- *Catatan*:  
+  - Jika input tidak valid (misalnya, elemen tidak bisa di-hash), akan mengembalikan list kosong dan mencetak pesan kesalahan.
+
+- *Contoh Penggunaan*:
+```
+data = [1, 2, 2, 3, 4, 4, 5]
+result = get_duplicates(data)
+print(result)  # Output: [2, 4]
+
+## Penggunaan
+Untuk menggunakan modul ini, cukup impor modul list_unique.py dalam skrip Python Anda dan panggil fungsi yang diperlukan.
+
+python
+from list_unique import *
+
+data = [1, 2, 2, 3, 4, 4, 5]
+
+print("Elemen Unik:", unique_elements(data))               # Output: [1, 2, 3, 4, 5]
+print("Jumlah Elemen Unik:", sum_unique(data))            # Output: 15
+print("Elemen Unik Terurut:", unique_and_sort(data))      # Output: [1, 2, 3, 4, 5]
+print("Elemen Duplikat:", get_duplicates(data))           # Output: [2, 4]
+```

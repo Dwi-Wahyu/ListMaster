@@ -275,7 +275,7 @@ print(linear_search(arr, target))  # Output: [0, 1, 4]
 # Pencarian biner tidak dapat dilakukan karena list tidak terurut
 ```
 
-## 1. Modul list_modification
+## 5. Modul list_modification
 Modul ini menyediakan tiga fungsi utama untuk menggabungkan beberapa list menjadi satu list. Fungsinya termasuk menggabungkan list dengan atau tanpa duplikasi, serta menjaga urutan elemen dalam penggabungan tanpa duplikat.
 
 ## Fitur

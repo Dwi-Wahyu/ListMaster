@@ -57,7 +57,7 @@ print(sorted_arr)  # Output: [11, 12, 22, 25, 64]
 
 Modul ini dirancang untuk memberikan kemudahan dalam mengurutkan data dengan berbagai metode yang efisien. Silakan gunakan sesuai kebutuhan Anda!
 
-## 2. modul `list_search`
+## 2. Modul `list_search`
 
 Modul ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.
 
@@ -168,7 +168,7 @@ print(linear_search(arr, target))  # Output: [0, 1, 4]
 # Pencarian biner tidak dapat dilakukan karena list tidak terurut
 ```
 
-## 3. Modul statistik_list.py
+## 3. Modul `list_statistic`
 
 Modul ini menyediakan fungsi-fungsi untuk melakukan analisis statistik pada list, termasuk menghitung rata-rata, median, nilai minimum, nilai maksimum, dan modus. Modul ini dirancang untuk mempermudah pengguna dalam melakukan analisis data numerik.
 
@@ -262,7 +262,7 @@ print("Modus:", modus(data))
 - Pastikan bahwa list yang digunakan untuk fungsi ini hanya berisi elemen numerik (int atau float).
 - Modul ini akan menghasilkan exception jika list tidak memenuhi syarat.
 
-## 2. Modul filter_list
+## 4. Modul `list_filter`
 
 #### 1. filter_genap(list_angka)
 
@@ -367,7 +367,7 @@ strings = ["apel", "jeruk", "anggur"]
 print("String yang mengandung 'an':", filter_mengandung(strings, "an"))
 ```
 
-## 5. Modul list_modification
+## 5. Modul `list_modification`
 Modul ini menyediakan tiga fungsi utama untuk menggabungkan beberapa list menjadi satu list. Fungsinya termasuk menggabungkan list dengan atau tanpa duplikasi, serta menjaga urutan elemen dalam penggabungan tanpa duplikat.
 
 ## Fitur
@@ -441,7 +441,7 @@ gabungan = gabungkan_list_unik(list1, list2)
 print(gabungan)  # Output: [1, 2, 3, 4, 5, 6]
 ```
 
-## 6. modul "list unique" 
+## 6. Modul `list_unique`
 Modul ini menyediakan beberapa fungsi untuk memanipulasi list di Python, termasuk mengambil elemen unik, menghitung jumlah elemen unik, mengurutkan elemen unik, dan menemukan elemen yang duplikat.
 
 ###  Fungsi

@@ -9,7 +9,7 @@
 ### Instalasi 
 Instalasi ListMaster sangat sederhana dan dapat dilakukan dengan perintah berikut :
 ```
-pip install ListMaster==0.1.0
+pip install ListMaster==0.1.3
 ```
 
 
@@ -118,6 +118,7 @@ Untuk menggunakan fungsi-fungsi ini, cukup impor ke dalam skrip Python Anda dan 
 #### Contoh dengan Angka
 
 ```python
+from ListMaster import is_sorted, linear_search, binary_search
 arr = [1, 2, 2, 3, 4, 5]
 target = 2
 

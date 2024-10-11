@@ -1,15 +1,9 @@
 Metadata-Version: 2.1
 Name: ListMaster
-Version: 0.1.1
-Summary: Library pengolah data python
+Version: 0.1.2
+Summary: ListMaster pengolah list python
 Home-page: https://github.com/Dwi-Wahyu/ListMaster.git
 Author: Kelompok 1
-Author-email: 
-License: MIT
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: OS Independent
-Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 
 <h1 align="center">ListMaster</h1>

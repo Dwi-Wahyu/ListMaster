@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="library-pengolah-data",  
+    name="ListMaster",  
     version="0.1.0",  
     description="Library pengolah data python",  
     long_description=open('README.md').read(),  
     long_description_content_type="text/markdown",
-    url="https://github.com/Dwi-Wahyu/library-pengolah-data.git",  
+    url="https://github.com/Dwi-Wahyu/ListMaster.git",  
     author="Kelompok 1",  
     author_email="",
     license="MIT",  

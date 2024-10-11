@@ -2,14 +2,25 @@ def rata_rata(target_list):
     """Menghitung rata-rata dari elemen numerik dalam list."""
     if not all(isinstance(i, (int, float)) for i in target_list):
         raise ValueError("List harus berisi angka.")
-    return sum(target_list) / len(target_list) if target_list else 0
+    
+    if len(target_list) == 0:  # Cek apakah list kosong
+        return 0  # Kembalikan 0 jika list kosong
+    
+    total = sum(target_list)
+    count = len(target_list)
+    return total / count
 
 def median(target_list):
     """Menghitung median dari elemen numerik dalam list."""
     if not all(isinstance(i, (int, float)) for i in target_list):
         raise ValueError("List harus berisi angka.")
+    
     sorted_list = sorted(target_list)
     n = len(sorted_list)
+    
+    if n == 0:  # Cek apakah list kosong
+        return 0  # Kembalikan 0 jika tidak ada elemen
+    
     mid = n // 2
     if n % 2 == 0:
         return (sorted_list[mid - 1] + sorted_list[mid]) / 2
@@ -18,15 +29,19 @@ def median(target_list):
 
 def min_max(target_list):
     """Mengembalikan nilai minimum dan maksimum dari elemen numerik dalam list."""
-    if not target_list:
+    if len(target_list) == 0:
         raise ValueError("List tidak boleh kosong.")
+    
     if not all(isinstance(i, (int, float)) for i in target_list):
         raise ValueError("List harus berisi angka.")
-    return min(target_list), max(target_list)
+    
+    minimum = min(target_list)
+    maksimum = max(target_list)
+    return minimum, maksimum
 
 def modus(target_list):
     """Menghitung modus dari elemen dalam list."""
-    if not target_list:
+    if len(target_list) == 0:
         raise ValueError("List tidak boleh kosong.")
     
     frekuensi = {}
@@ -36,5 +51,7 @@ def modus(target_list):
     max_freq = max(frekuensi.values())
     modus_list = [k for k, v in frekuensi.items() if v == max_freq]
     
-    return modus_list if len(modus_list) < len(frekuensi) else "Tidak ada modus (semua elemen muncul dengan frekuensi yang sama)."
-
+    if len(modus_list) < len(frekuensi):
+        return modus_list
+    else:
+        return "Tidak ada modus (semua elemen muncul dengan frekuensi yang sama)."

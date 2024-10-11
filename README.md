@@ -1,6 +1,4 @@
-<h1 align="center">ListMaster</h1>
-
-
+<h1 align="center">ListMaster</h1> <p align="center"> <b>Solusi Sederhana untuk Manipulasi List di Python</b> </p>
 
 ### Apa fungsi library ini ?
 
@@ -9,10 +7,16 @@
 ### Instalasi 
 Instalasi ListMaster sangat sederhana dan dapat dilakukan dengan perintah berikut :
 ```
-pip install ListMaster==0.1.3
+pip install ListMaster
 ```
 
-
+### Fitur Utama
+- Sorting dengan berbagai algoritma (bubble sort, quick sort, merge sort, dll.)
+- Search untuk mencari elemen atau subset list
+- Statistik dasar seperti rata-rata, median dan modus
+- Filter data berdasarkan kondisi tertentu
+- Modifikasi elemen list secara mudah
+- Mengelola elemen unik dan menemukan elemen duplikat.
 
 ## 1. Modul `list_sorting`
 
@@ -135,6 +139,7 @@ print(binary_search(arr, target))  # Output: [1, 2]
 #### Contoh dengan String
 
 ```python
+from ListMaster import is_sorted, linear_search, binary_search
 arr = ["apel", "jeruk", "jeruk", "mangga", "pisang"]
 target = "jeruk"
 
@@ -151,6 +156,7 @@ print(binary_search(arr, target))  # Output: [1, 2]
 #### Contoh dengan Tuple
 
 ```python
+from ListMaster import is_sorted, linear_search, binary_search 
 arr = [(1, 'a'), (2, 'b'), (2, 'b'), (3, 'c')]
 target = (2, 'b')
 
@@ -198,6 +204,7 @@ Menghitung rata-rata dari elemen numerik dalam list.
 
 *Contoh*:
 ```python
+from ListMaster import rata_rata
 data = [1, 2, 3, 4]
 result = rata_rata(data) # Output: 2.5
 ```
@@ -215,6 +222,7 @@ Menghitung median dari elemen numerik dalam list.
 
 *Contoh*:
 ```python
+from ListMaster import median
 data = [1, 2, 3, 4]
 result = median(data) # Output: 2.5
 ```
@@ -232,6 +240,7 @@ Mengembalikan nilai minimum dan maksimum dari elemen numerik dalam list.
 
 *Contoh*:
 ```python
+from ListMaster import min_max
 data = [1, 2, 3, 4]
 result = min_max(data) # Output: (1, 4)
 ```
@@ -249,6 +258,7 @@ Menghitung modus dari elemen dalam list.
 
 *Contoh*:
 ```python
+from ListMaster import modus
 data = [1, 2, 2, 3]
 result = modus(data) # Output: [2]
 ```
@@ -258,7 +268,7 @@ result = modus(data) # Output: [2]
 Untuk menggunakan modul ini, cukup impor modul dalam skrip Python Anda dan panggil fungsi yang diperlukan.
 
 ```python
-from statistik_list import *
+from ListMaster import rata_rata, median, min_max, modus
 
 data = [1, 2, 2, 3, 4, 4, 4, 5]
 
@@ -288,6 +298,7 @@ Memfilter angka genap dari list.
 
 *Contoh*:
 ```python
+from ListMaster import filter_genap
 angka = [1, 2, 3, 4, 5, 6]
 result = filter_genap(angka) 
 # Output: [2, 4, 6]
@@ -309,6 +320,7 @@ Memfilter angka yang lebih besar dari nilai tertentu.
 
 *Contoh*:
 ```python
+from ListMaster import filter_lebih_dari
 angka = [1, 2, 3, 4, 5, 6]
 result = filter_lebih_dari(angka, 3)
 # Output: [4, 5, 6]
@@ -329,6 +341,7 @@ Memfilter angka yang habis dibagi oleh pembagi tertentu.
 
 *Contoh*:
 ```python
+from ListMaster import filter_habis_dibagi
 angka = [1, 2, 3, 4, 5, 6]
 result = filter_habis_dibagi(angka, 2)
 # Output: [2, 4, 6]
@@ -350,6 +363,7 @@ Memfilter string yang mengandung substring tertentu.
 
 *Contoh*:
 ```python
+from ListMaster import filter_mengandung
 strings = ["apel", "jeruk", "anggur"]
 result = filter_mengandung(strings, "an")
 # Output: ["anggur"]
@@ -366,6 +380,7 @@ from list_filter import filter_genap, filter_lebih_dari, filter_habis_dibagi, fi
 
 ### Contoh penggunaan filter untuk angka
 ```python
+from ListMaster import filter_genap, filter_lebih_dari, filter_habis_dibagi
 angka = [1, 2, 3, 4, 5, 6]
 print("Angka Genap:", filter_genap(angka))
 print("Angka lebih dari 3:", filter_lebih_dari(angka, 3))
@@ -374,6 +389,7 @@ print("Angka yang habis dibagi 2:", filter_habis_dibagi(angka, 2))
 
 ### Contoh penggunaan filter untuk string
 ```python
+from ListMaster import filter_mengandung
 strings = ["apel", "jeruk", "anggur"]
 print("String yang mengandung 'an':", filter_mengandung(strings, "an"))
 ```
@@ -406,6 +422,7 @@ Fungsi ini menggabungkan sejumlah list menjadi satu list besar. Semua elemen dar
 
 ### Contoh Penggunaan
 ```python
+from ListMaster import gabungkan_list
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 gabungan = gabungkan_list(list1, list2)
@@ -426,6 +443,7 @@ Jika salah satu argumen bukan list, akan muncul TypeError.
 
 ### Contoh Penggunaan:
 ```python
+from ListMaster import gabungkan_tanpa_duplikat
 list1 = [1, 2, 3, 3]
 list2 = [4, 5, 6, 4]
 gabungan = gabungkan_tanpa_duplikat(list1, list2)
@@ -446,6 +464,7 @@ Jika salah satu argumen bukan list, akan muncul TypeError.
 
 ### Contoh Penggunaan:
 ```python
+from ListMaster import gabungkan_list_unik
 list1 = [1, 2, 3, 3]
 list2 = [4, 5, 6, 4]
 gabungan = gabungkan_list_unik(list1, list2)
@@ -471,6 +490,7 @@ Mengembalikan list hanya dengan elemen-elemen unik (tanpa duplikat).
     
 - *Contoh Penggunaan*:
   ```python
+  from ListMaster import unique_elements
   data = [1, 2, 2, 3, 4, 4, 5]
   result = unique_elements(data)
   print(result)  # Output: [1, 2, 3, 4, 5]
@@ -490,6 +510,7 @@ Mengembalikan jumlah dari semua elemen unik dalam list.
 
 - *Contoh Penggunaan*:
   ```python
+  from ListMaster import sum_unique
   data = [1, 2, 2, 3, 4, 4, 5]
   result = sum_unique(data)
   print(result)  # Output: 15 (1 + 2 + 3 + 4 + 5)
@@ -509,6 +530,7 @@ Mengembalikan elemen unik yang sudah diurutkan secara ascending.
     
 - *Contoh Penggunaan*:
   ```python
+  from ListMaster import unique_and_sort
   data = [4, 2, 5, 1, 3, 2, 5]
   result = unique_and_sort(data)
   print(result)  # Output: [1, 2, 3, 4, 5]
@@ -528,6 +550,7 @@ Mengembalikan elemen-elemen yang duplikat dalam list (tidak unik).
 
 - *Contoh Penggunaan*:
   ```python
+  from ListMaster import get_duplicates
   data = [1, 2, 2, 3, 4, 4, 5]
   result = get_duplicates(data)
   print(result)  # Output: [2, 4]
@@ -537,7 +560,7 @@ Mengembalikan elemen-elemen yang duplikat dalam list (tidak unik).
 Untuk menggunakan modul ini, cukup impor modul list_unique.py dalam skrip Python Anda dan panggil fungsi yang diperlukan.
 
 ```python
-from list_unique import *
+from ListMaster import unique_element, sum_unique, unique_and_sort, get_duplicates
 
 data = [1, 2, 2, 3, 4, 4, 5]
 
@@ -546,3 +569,8 @@ print("Jumlah Elemen Unik:", sum_unique(data))            # Output: 15
 print("Elemen Unik Terurut:", unique_and_sort(data))      # Output: [1, 2, 3, 4, 5]
 print("Elemen Duplikat:", get_duplicates(data))           # Output: [2, 4]
 ```
+
+## Author
+<a href="https://github.com/Dwi-Wahyu/ListMaster/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Dwi-Wahyu/ListMaster" />
+</a>

@@ -1,8 +1,18 @@
-<h1 align="center">⚡ListMaster⚡</h1>
+<h1 align="center">ListMaster</h1>
+
+
 
 ### Apa fungsi library ini ?
 
-ListMaster adalah library Python yang dirancang untuk memudahkan berbagai operasi pada list, termasuk sorting, modifikasi, penggabungan, dan manipulasi data lainnya. Dengan berbagai algoritma sorting klasik serta alat bantu lainnya, ListMaster membantu Anda mengelola data berbasis list secara efisien.
+**ListMaster** adalah library Python yang dirancang untuk memudahkan berbagai operasi pada list, termasuk sorting, modifikasi, penggabungan, dan manipulasi data lainnya. Dengan berbagai algoritma sorting klasik serta alat bantu lainnya, ListMaster membantu Anda mengelola data berbasis list secara efisien.
+
+### Instalasi 
+Instalasi ListMaster sangat sederhana dan dapat dilakukan dengan perintah berikut :
+```
+pip install ListMaster==0.1.0
+```
+
+
 
 ## 1. Modul `list_sorting`
 
@@ -38,7 +48,7 @@ Setiap fungsi pengurutan menerima dua parameter:
 #### Contoh Penggunaan
 
 ```python
-from sorting_module import bubble_sort, selection_sort, insertion_sort, merge_sort, quick_sort, tim_sort
+from ListMaster import bubble_sort, selection_sort, insertion_sort, merge_sort, quick_sort, tim_sort
 
 arr = [64, 25, 12, 22, 11]
 

@@ -522,7 +522,7 @@ Mengembalikan elemen-elemen yang duplikat dalam list (tidak unik).
   print(result)  # Output: [2, 4]
   ```
 
-## Penggunaan
+### Penggunaan
 Untuk menggunakan modul ini, cukup impor modul list_unique.py dalam skrip Python Anda dan panggil fungsi yang diperlukan.
 
 ```python

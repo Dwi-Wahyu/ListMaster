@@ -186,7 +186,7 @@ Menghitung rata-rata dari elemen numerik dalam list.
 - float: Rata-rata dari elemen dalam list. Mengembalikan 0 jika list kosong.
 
 *Contoh*:
-```
+```python
 data = [1, 2, 3, 4]
 result = rata_rata(data) # Output: 2.5
 ```
@@ -203,7 +203,7 @@ Menghitung median dari elemen numerik dalam list.
 - float: Nilai median dari elemen dalam list.
 
 *Contoh*:
-```
+```python
 data = [1, 2, 3, 4]
 result = median(data) # Output: 2.5
 ```
@@ -220,7 +220,7 @@ Mengembalikan nilai minimum dan maksimum dari elemen numerik dalam list.
 - tuple: Tuple yang berisi nilai minimum dan maksimum.
 
 *Contoh*:
-```
+```python
 data = [1, 2, 3, 4]
 result = min_max(data) # Output: (1, 4)
 ```
@@ -237,7 +237,7 @@ Menghitung modus dari elemen dalam list.
 - list atau string: Daftar modus jika ada lebih dari satu, atau pesan jika semua elemen muncul dengan frekuensi yang sama.
 
 *Contoh*:
-```
+```python
 data = [1, 2, 2, 3]
 result = modus(data) # Output: [2]
 ```
@@ -246,7 +246,7 @@ result = modus(data) # Output: [2]
 
 Untuk menggunakan modul ini, cukup impor modul dalam skrip Python Anda dan panggil fungsi yang diperlukan.
 
-```
+```python
 from statistik_list import *
 
 data = [1, 2, 2, 3, 4, 4, 4, 5]
@@ -276,9 +276,9 @@ Memfilter angka genap dari list.
 - list: List yang hanya berisi angka genap.
 
 *Contoh*:
-```
+```python
 angka = [1, 2, 3, 4, 5, 6]
-result = filter_genap(angka)
+result = filter_genap(angka) 
 # Output: [2, 4, 6]
 ```
 
@@ -297,7 +297,7 @@ Memfilter angka yang lebih besar dari nilai tertentu.
 - list: List yang berisi angka yang lebih besar dari nilai.
 
 *Contoh*:
-```
+```python
 angka = [1, 2, 3, 4, 5, 6]
 result = filter_lebih_dari(angka, 3)
 # Output: [4, 5, 6]
@@ -317,7 +317,7 @@ Memfilter angka yang habis dibagi oleh pembagi tertentu.
 - list: List yang berisi angka yang habis dibagi oleh pembagi.
 
 *Contoh*:
-```
+```python
 angka = [1, 2, 3, 4, 5, 6]
 result = filter_habis_dibagi(angka, 2)
 # Output: [2, 4, 6]
@@ -338,7 +338,7 @@ Memfilter string yang mengandung substring tertentu.
 - list: List yang berisi string yang mengandung substring.
 
 *Contoh*:
-```
+```python
 strings = ["apel", "jeruk", "anggur"]
 result = filter_mengandung(strings, "an")
 # Output: ["anggur"]
@@ -354,7 +354,7 @@ python
 from list_filter import filter_genap, filter_lebih_dari, filter_habis_dibagi, filter_mengandung
 
 ### Contoh penggunaan filter untuk angka
-```
+```python
 angka = [1, 2, 3, 4, 5, 6]
 print("Angka Genap:", filter_genap(angka))
 print("Angka lebih dari 3:", filter_lebih_dari(angka, 3))
@@ -362,7 +362,7 @@ print("Angka yang habis dibagi 2:", filter_habis_dibagi(angka, 2))
 ```
 
 ### Contoh penggunaan filter untuk string
-```
+```python
 strings = ["apel", "jeruk", "anggur"]
 print("String yang mengandung 'an':", filter_mengandung(strings, "an"))
 ```
@@ -394,7 +394,7 @@ Fungsi ini menggabungkan sejumlah list menjadi satu list besar. Semua elemen dar
 + Jika salah satu argumen bukan list, akan muncul TypeError.
 
 ### Contoh Penggunaan
-``` py 
+```python
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 gabungan = gabungkan_list(list1, list2)
@@ -414,7 +414,7 @@ Mengembalikan satu list besar tanpa elemen duplikat.
 Jika salah satu argumen bukan list, akan muncul TypeError.
 
 ### Contoh Penggunaan:
-```
+```python
 list1 = [1, 2, 3, 3]
 list2 = [4, 5, 6, 4]
 gabungan = gabungkan_tanpa_duplikat(list1, list2)
@@ -434,7 +434,7 @@ Mengembalikan satu list besar yang berisi semua elemen tanpa elemen duplikat, me
 Jika salah satu argumen bukan list, akan muncul TypeError.
 
 ### Contoh Penggunaan:
-```
+```python
 list1 = [1, 2, 3, 3]
 list2 = [4, 5, 6, 4]
 gabungan = gabungkan_list_unik(list1, list2)
@@ -459,11 +459,11 @@ Mengembalikan list hanya dengan elemen-elemen unik (tanpa duplikat).
   - Jika input tidak valid (misalnya, elemen tidak bisa di-hash), akan mengembalikan list kosong dan mencetak pesan kesalahan.
     
 - *Contoh Penggunaan*:
-```
-data = [1, 2, 2, 3, 4, 4, 5]
-result = unique_elements(data)
-print(result)  # Output: [1, 2, 3, 4, 5]
-```
+  ```python
+  data = [1, 2, 2, 3, 4, 4, 5]
+  result = unique_elements(data)
+  print(result)  # Output: [1, 2, 3, 4, 5]
+  ```
 
 ### 2. sum_unique(input_list)
 Mengembalikan jumlah dari semua elemen unik dalam list.
@@ -478,11 +478,11 @@ Mengembalikan jumlah dari semua elemen unik dalam list.
   - Jika input tidak valid (misalnya, elemen tidak bisa dijumlahkan), akan mengembalikan 0 dan mencetak pesan kesalahan.
 
 - *Contoh Penggunaan*:
-```
-data = [1, 2, 2, 3, 4, 4, 5]
-result = sum_unique(data)
-print(result)  # Output: 15 (1 + 2 + 3 + 4 + 5)
-```
+  ```python
+  data = [1, 2, 2, 3, 4, 4, 5]
+  result = sum_unique(data)
+  print(result)  # Output: 15 (1 + 2 + 3 + 4 + 5)
+  ```
 
 ### 3. unique_and_sort(input_list)
 Mengembalikan elemen unik yang sudah diurutkan secara ascending.
@@ -497,11 +497,11 @@ Mengembalikan elemen unik yang sudah diurutkan secara ascending.
   - Jika input tidak valid (misalnya, elemen tidak bisa diurutkan), akan mengembalikan list kosong dan mencetak pesan kesalahan.
     
 - *Contoh Penggunaan*:
-```
-data = [4, 2, 5, 1, 3, 2, 5]
-result = unique_and_sort(data)
-print(result)  # Output: [1, 2, 3, 4, 5]
-```
+  ```python
+  data = [4, 2, 5, 1, 3, 2, 5]
+  result = unique_and_sort(data)
+  print(result)  # Output: [1, 2, 3, 4, 5]
+  ```
 
 ### 4. get_duplicates(input_list)
 Mengembalikan elemen-elemen yang duplikat dalam list (tidak unik).
@@ -516,20 +516,21 @@ Mengembalikan elemen-elemen yang duplikat dalam list (tidak unik).
   - Jika input tidak valid (misalnya, elemen tidak bisa di-hash), akan mengembalikan list kosong dan mencetak pesan kesalahan.
 
 - *Contoh Penggunaan*:
-```
-data = [1, 2, 2, 3, 4, 4, 5]
-result = get_duplicates(data)
-print(result)  # Output: [2, 4]
+  ```python
+  data = [1, 2, 2, 3, 4, 4, 5]
+  result = get_duplicates(data)
+  print(result)  # Output: [2, 4]
+  ```
 
 ## Penggunaan
 Untuk menggunakan modul ini, cukup impor modul list_unique.py dalam skrip Python Anda dan panggil fungsi yang diperlukan.
 
-python
+```python
 from list_unique import *
 
 data = [1, 2, 2, 3, 4, 4, 5]
 
-print("Elemen Unik:", unique_elements(data))               # Output: [1, 2, 3, 4, 5]
+print("Elemen Unik:", unique_element(data))               # Output: [1, 2, 3, 4, 5]
 print("Jumlah Elemen Unik:", sum_unique(data))            # Output: 15
 print("Elemen Unik Terurut:", unique_and_sort(data))      # Output: [1, 2, 3, 4, 5]
 print("Elemen Duplikat:", get_duplicates(data))           # Output: [2, 4]

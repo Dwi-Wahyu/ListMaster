@@ -57,7 +57,118 @@ print(sorted_arr)  # Output: [11, 12, 22, 25, 64]
 
 Modul ini dirancang untuk memberikan kemudahan dalam mengurutkan data dengan berbagai metode yang efisien. Silakan gunakan sesuai kebutuhan Anda!
 
-## Modul statistik_list.py
+## 2. modul `list_search`
+
+Modul ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.
+
+### Fungsi
+
+#### 1. `is_sorted(arr)`
+
+Memeriksa apakah sebuah list diurutkan dalam urutan menaik.
+
+- **Parameter:**
+  - `arr`: Sebuah list elemen yang akan diperiksa.
+  
+- **Mengembalikan:**
+  - `True` jika list diurutkan, `False` jika tidak.
+
+#### 2. `linear_search(arr, target)`
+
+Melakukan pencarian linear untuk menemukan semua kemunculan elemen target dalam sebuah list.
+
+- **Parameter:**
+  - `arr`: Sebuah list elemen yang akan dicari.
+  - `target`: Elemen yang dicari.
+  
+- **Mengembalikan:**
+  - Sebuah list indeks di mana target ditemukan, atau list kosong jika tidak ditemukan.
+
+- **Mengangkat:**
+  - `ValueError`: Jika argumen pertama bukan sebuah list.
+
+#### 3. `binary_search(arr, target)`
+
+Melakukan pencarian biner untuk menemukan semua kemunculan elemen target dalam sebuah list yang terurut.
+
+- **Parameter:**
+  - `arr`: Sebuah list yang sudah diurutkan untuk pencarian.
+  - `target`: Elemen yang dicari.
+  
+- **Mengembalikan:**
+  - Sebuah list indeks di mana target ditemukan, atau list kosong jika tidak ditemukan.
+
+- **Mengangkat:**
+  - `ValueError`: Jika argumen pertama bukan sebuah list atau jika list tidak diurutkan dalam urutan menaik.
+
+### Penggunaan
+
+Untuk menggunakan fungsi-fungsi ini, cukup impor ke dalam skrip Python Anda dan panggil dengan parameter yang sesuai. Pastikan bahwa list sudah diurutkan sebelum menggunakan fungsi `binary_search`.
+
+#### Contoh dengan Angka
+
+```python
+arr = [1, 2, 2, 3, 4, 5]
+target = 2
+
+# Periksa apakah list diurutkan
+print(is_sorted(arr))  # Output: True
+
+# Lakukan pencarian linear
+print(linear_search(arr, target))  # Output: [1, 2]
+
+# Lakukan pencarian biner
+print(binary_search(arr, target))  # Output: [1, 2]
+```
+
+#### Contoh dengan String
+
+```python
+arr = ["apel", "jeruk", "jeruk", "mangga", "pisang"]
+target = "jeruk"
+
+# Periksa apakah list diurutkan
+print(is_sorted(arr))  # Output: True
+
+# Lakukan pencarian linear
+print(linear_search(arr, target))  # Output: [1, 2]
+
+# Lakukan pencarian biner
+print(binary_search(arr, target))  # Output: [1, 2]
+```
+
+#### Contoh dengan Tuple
+
+```python
+arr = [(1, 'a'), (2, 'b'), (2, 'b'), (3, 'c')]
+target = (2, 'b')
+
+# Periksa apakah list diurutkan
+print(is_sorted(arr))  # Output: True
+
+# Lakukan pencarian linear
+print(linear_search(arr, target))  # Output: [1, 2]
+
+# Lakukan pencarian biner
+print(binary_search(arr, target))  # Output: [1, 2]
+```
+
+#### Contoh dengan Boolean
+
+```python
+arr = [True, True, False, False, True]
+target = True
+
+# Periksa apakah list diurutkan
+print(is_sorted(arr))  # Output: False
+
+# Lakukan pencarian linear
+print(linear_search(arr, target))  # Output: [0, 1, 4]
+
+# Pencarian biner tidak dapat dilakukan karena list tidak terurut
+```
+
+## 3. Modul statistik_list.py
 
 Modul ini menyediakan fungsi-fungsi untuk melakukan analisis statistik pada list, termasuk menghitung rata-rata, median, nilai minimum, nilai maksimum, dan modus. Modul ini dirancang untuk mempermudah pengguna dalam melakukan analisis data numerik.
 
@@ -151,117 +262,109 @@ print("Modus:", modus(data))
 - Pastikan bahwa list yang digunakan untuk fungsi ini hanya berisi elemen numerik (int atau float).
 - Modul ini akan menghasilkan exception jika list tidak memenuhi syarat.
 
-## 2. modul `list_search`
+## 2. Modul filter_list
 
-Modul ini berisi implementasi Python dari berbagai algoritma pencarian, termasuk pencarian linear dan pencarian biner, serta fungsi utilitas untuk memeriksa apakah sebuah list diurutkan dalam urutan menaik.
+#### 1. filter_genap(list_angka)
 
-### Fungsi
+*Deskripsi*: 
+Memfilter angka genap dari list.
 
-#### 1. `is_sorted(arr)`
+*Parameter*:
+- list_angka (list): List yang berisi angka (int atau float).
 
-Memeriksa apakah sebuah list diurutkan dalam urutan menaik.
+*Pengembalian*:
+- list: List yang hanya berisi angka genap.
 
-- **Parameter:**
-  - `arr`: Sebuah list elemen yang akan diperiksa.
-  
-- **Mengembalikan:**
-  - `True` jika list diurutkan, `False` jika tidak.
-
-#### 2. `linear_search(arr, target)`
-
-Melakukan pencarian linear untuk menemukan semua kemunculan elemen target dalam sebuah list.
-
-- **Parameter:**
-  - `arr`: Sebuah list elemen yang akan dicari.
-  - `target`: Elemen yang dicari.
-  
-- **Mengembalikan:**
-  - Sebuah list indeks di mana target ditemukan, atau list kosong jika tidak ditemukan.
-
-- **Mengangkat:**
-  - `ValueError`: Jika argumen pertama bukan sebuah list.
-
-#### 3. `binary_search(arr, target)`
-
-Melakukan pencarian biner untuk menemukan semua kemunculan elemen target dalam sebuah list yang terurut.
-
-- **Parameter:**
-  - `arr`: Sebuah list yang sudah diurutkan untuk pencarian.
-  - `target`: Elemen yang dicari.
-  
-- **Mengembalikan:**
-  - Sebuah list indeks di mana target ditemukan, atau list kosong jika tidak ditemukan.
-
-- **Mengangkat:**
-  - `ValueError`: Jika argumen pertama bukan sebuah list atau jika list tidak diurutkan dalam urutan menaik.
-
-### Penggunaan
-
-Untuk menggunakan fungsi-fungsi ini, cukup impor ke dalam skrip Python Anda dan panggil dengan parameter yang sesuai. Pastikan bahwa list sudah diurutkan sebelum menggunakan fungsi `binary_search`.
-
-### Contoh
-
-#### Contoh dengan Angka
-
-```python
-arr = [1, 2, 2, 3, 4, 5]
-target = 2
-
-# Periksa apakah list diurutkan
-print(is_sorted(arr))  # Output: True
-
-# Lakukan pencarian linear
-print(linear_search(arr, target))  # Output: [1, 2]
-
-# Lakukan pencarian biner
-print(binary_search(arr, target))  # Output: [1, 2]
+*Contoh*:
+```
+angka = [1, 2, 3, 4, 5, 6]
+result = filter_genap(angka)
+# Output: [2, 4, 6]
 ```
 
-#### Contoh dengan String
+---
 
-```python
-arr = ["apel", "jeruk", "jeruk", "mangga", "pisang"]
-target = "jeruk"
+#### 2. filter_lebih_dari(list_angka, nilai)
 
-# Periksa apakah list diurutkan
-print(is_sorted(arr))  # Output: True
+*Deskripsi*: 
+Memfilter angka yang lebih besar dari nilai tertentu.
 
-# Lakukan pencarian linear
-print(linear_search(arr, target))  # Output: [1, 2]
+*Parameter*:
+- list_angka (list): List yang berisi angka (int atau float).
+- nilai (int/float): Nilai batas untuk filter.
 
-# Lakukan pencarian biner
-print(binary_search(arr, target))  # Output: [1, 2]
+*Pengembalian*:
+- list: List yang berisi angka yang lebih besar dari nilai.
+
+*Contoh*:
+```
+angka = [1, 2, 3, 4, 5, 6]
+result = filter_lebih_dari(angka, 3)
+# Output: [4, 5, 6]
+```
+---
+
+#### 3. filter_habis_dibagi(list_angka, pembagi)
+
+*Deskripsi*: 
+Memfilter angka yang habis dibagi oleh pembagi tertentu.
+
+*Parameter*:
+- list_angka (list): List yang berisi angka (int atau float).
+- pembagi (int/float): Angka yang digunakan sebagai pembagi.
+
+*Pengembalian*:
+- list: List yang berisi angka yang habis dibagi oleh pembagi.
+
+*Contoh*:
+```
+angka = [1, 2, 3, 4, 5, 6]
+result = filter_habis_dibagi(angka, 2)
+# Output: [2, 4, 6]
 ```
 
-#### Contoh dengan Tuple
+---
 
-```python
-arr = [(1, 'a'), (2, 'b'), (2, 'b'), (3, 'c')]
-target = (2, 'b')
+#### 4. filter_mengandung(list_string, substring)
 
-# Periksa apakah list diurutkan
-print(is_sorted(arr))  # Output: True
+*Deskripsi*: 
+Memfilter string yang mengandung substring tertentu.
 
-# Lakukan pencarian linear
-print(linear_search(arr, target))  # Output: [1, 2]
+*Parameter*:
+- list_string (list): List yang berisi string.
+- substring (str): Substring yang dicari dalam string.
 
-# Lakukan pencarian biner
-print(binary_search(arr, target))  # Output: [1, 2]
+*Pengembalian*:
+- list: List yang berisi string yang mengandung substring.
+
+*Contoh*:
+```
+strings = ["apel", "jeruk", "anggur"]
+result = filter_mengandung(strings, "an")
+# Output: ["anggur"]
 ```
 
-#### Contoh dengan Boolean
+---
 
-```python
-arr = [True, True, False, False, True]
-target = True
+### Cara Menggunakan
 
-# Periksa apakah list diurutkan
-print(is_sorted(arr))  # Output: False
+Untuk menggunakan modul ini, Anda dapat mengimpor fungsi yang diperlukan dalam skrip Python Anda. Berikut adalah contoh penggunaan dari setiap fungsi:
 
-# Lakukan pencarian linear
-print(linear_search(arr, target))  # Output: [0, 1, 4]
+python
+from list_filter import filter_genap, filter_lebih_dari, filter_habis_dibagi, filter_mengandung
 
-# Pencarian biner tidak dapat dilakukan karena list tidak terurut
+### Contoh penggunaan filter untuk angka
+```
+angka = [1, 2, 3, 4, 5, 6]
+print("Angka Genap:", filter_genap(angka))
+print("Angka lebih dari 3:", filter_lebih_dari(angka, 3))
+print("Angka yang habis dibagi 2:", filter_habis_dibagi(angka, 2))
+```
+
+### Contoh penggunaan filter untuk string
+```
+strings = ["apel", "jeruk", "anggur"]
+print("String yang mengandung 'an':", filter_mengandung(strings, "an"))
 ```
 
 ## 5. Modul list_modification

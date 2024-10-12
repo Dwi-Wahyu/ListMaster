@@ -554,11 +554,11 @@ Mengembalikan elemen-elemen yang duplikat dalam list (tidak unik).
 Untuk menggunakan modul ini, cukup impor modul list_unique.py dalam skrip Python Anda dan panggil fungsi yang diperlukan.
 
 ```python
-from ListMaster import unique_element, sum_unique, unique_and_sort, get_duplicates
+from ListMaster import unique_elements, sum_unique, unique_and_sort, get_duplicates
 
 data = [1, 2, 2, 3, 4, 4, 5]
 
-print("Elemen Unik:", unique_element(data))               # Output: [1, 2, 3, 4, 5]
+print("Elemen Unik:", unique_elements(data))               # Output: [1, 2, 3, 4, 5]
 print("Jumlah Elemen Unik:", sum_unique(data))            # Output: 15
 print("Elemen Unik Terurut:", unique_and_sort(data))      # Output: [1, 2, 3, 4, 5]
 print("Elemen Duplikat:", get_duplicates(data))           # Output: [2, 4]

@@ -54,10 +54,6 @@ arr = [64, 25, 12, 22, 11]
 sorted_arr = bubble_sort(arr)
 print(sorted_arr)  # Output: [11, 12, 22, 25, 64]
 
-# Quick Sort (descending)
-sorted_arr = quick_sort(arr, reverse=True)
-print(sorted_arr)  # Output: [64, 25, 22, 12, 11]
-
 # Tim Sort (ascending)
 sorted_arr = tim_sort(arr)
 print(sorted_arr)  # Output: [11, 12, 22, 25, 64]

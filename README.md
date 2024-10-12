@@ -33,13 +33,7 @@ Modul ini berisi berbagai algoritma pengurutan yang dapat digunakan untuk mengur
 3. **Insertion Sort**: 
    - Mengurutkan dengan cara memasukkan elemen dari bagian tidak terurut ke bagian yang sudah terurut pada posisi yang tepat.
 
-4. **Merge Sort**: 
-   - Menggunakan pendekatan divide and conquer untuk membagi array, mengurutkan setiap bagian secara rekursif, lalu menggabungkannya kembali.
-
-5. **Quick Sort**: 
-   - Menggunakan pivot untuk mempartisi array menjadi dua bagian, dan mengurutkan secara rekursif pada kedua bagian.
-
-6. **Tim Sort**: 
+4. **Tim Sort**: 
    - Sorting bawaan Python yang merupakan kombinasi dari Merge Sort dan Insertion Sort, dioptimalkan untuk performa.
 
 ### Penggunaan

@@ -20,7 +20,7 @@ pip install ListMaster
 
 ## 1. Modul `list_sorting`
 
-Modul ini berisi berbagai algoritma pengurutan yang dapat digunakan untuk mengurutkan data dalam bentuk array atau list. Algoritma yang disertakan antara lain: **Bubble Sort**, **Selection Sort**, **Insertion Sort**, **Merge Sort**, **Quick Sort**, serta **Tim Sort** yang merupakan sorting bawaan Python. Setiap algoritma mendukung pengurutan secara ascending (menaik) maupun descending (menurun).
+Modul ini berisi berbagai algoritma pengurutan yang dapat digunakan untuk mengurutkan data dalam bentuk array atau list. Algoritma yang disertakan antara lain: **Bubble Sort**, **Selection Sort**, **Insertion Sort** dan **Tim Sort** yang merupakan sorting bawaan Python. Setiap algoritma mendukung pengurutan secara ascending (menaik) maupun descending (menurun).
 
 ### Daftar Algoritma
 
@@ -46,7 +46,7 @@ Setiap fungsi pengurutan menerima dua parameter:
 #### Contoh Penggunaan
 
 ```python
-from ListMaster import bubble_sort, selection_sort, insertion_sort, merge_sort, quick_sort, tim_sort
+from ListMaster import bubble_sort, selection_sort, insertion_sort, tim_sort
 
 arr = [64, 25, 12, 22, 11]
 

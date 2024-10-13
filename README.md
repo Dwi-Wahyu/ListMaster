@@ -11,7 +11,7 @@ pip install ListMaster
 ```
 
 ### Fitur Utama
-- Sorting dengan berbagai algoritma (bubble sort, quick sort, merge sort, dll.)
+- Sorting dengan berbagai algoritma (bubble sort, selection sort, dll.)
 - Search untuk mencari elemen atau subset list
 - Statistik dasar seperti rata-rata, median dan modus
 - Filter data berdasarkan kondisi tertentu
